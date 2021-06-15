@@ -11,10 +11,14 @@ import android.view.SurfaceView
  * created on :2021/6/8 11:38
  */
 class MyGLSurfaceView:GLSurfaceView {
+    private lateinit var mGLRender:MyGLRender
+    private val mNativeRender by lazy {
+        MyNativeRender()
+    }
     constructor(context:Context):this(context, null)
     constructor(context:Context, attrs:AttributeSet?):super(context, attrs)
     init {
         setEGLContextClientVersion(3)
-
+        mGLRender = MyGLRender(mNativeRender)
     }
 }

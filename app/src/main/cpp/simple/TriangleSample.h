@@ -8,8 +8,6 @@
 #include "../render/MyGLRenderContext.h"
 #include "../util/LogUtil.h"
 
-MyGLRenderContext* myGlRenderContext;
-
 class TriangleSample {
 
 };
