@@ -9,6 +9,14 @@
 #include "../util/LogUtil.h"
 
 class TriangleSample {
+    TriangleSample();
+
+    ~TriangleSample();
+    Init();
+    Draw();
+    private
+        int m_ProgramObj;
+        GLuint m_VertexShader, m_FragmentShader;
 
 };
 

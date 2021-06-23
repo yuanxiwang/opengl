@@ -6,20 +6,18 @@ import javax.microedition.khronos.opengles.GL10
 
 /**
  * @author 袁希望
- * created on :2021/6/15 10:39
- * description:// TODO 2021/6/15 10:39
  */
 class MyGLRender(myNativeRender: MyNativeRender):GLSurfaceView.Renderer {
-    private lateinit var mNativeRender: MyNativeRender
+    private var mNativeRender: MyNativeRender = myNativeRender
     override fun onSurfaceCreated(gl: GL10?, config: EGLConfig?) {
-
+        mNativeRender.nativeOnSurfaceCreated()
     }
 
     override fun onSurfaceChanged(gl: GL10?, width: Int, height: Int) {
-
+        mNativeRender.nativeOnSurfaceChanged(width, height)
     }
 
     override fun onDrawFrame(gl: GL10?) {
-
+        mNativeRender.nativeOnDrawFrame()
     }
 }
